@@ -23,7 +23,9 @@ public class DevExtEditor   {
 
         //将焦点定位到某个文件，并进行重命名       
         //id,回调处理，新建文件url,图标，源始文件url   
-        ProjectWindowUtil.StartNameEditingIfProjectWindowExists(0,ScriptableObject.CreateInstance<CreateFileAction>(),folder + "/NewLuaScript.lua", null, "Assets/Editor/felixwee/templates/lua_template.lua");
+
+        Texture2D icon = Resources.Load<Texture2D>("icon/lua");
+        ProjectWindowUtil.StartNameEditingIfProjectWindowExists(0,ScriptableObject.CreateInstance<CreateFileAction>(),folder + "/NewLuaScript.lua", icon, "Assets/Editor/felixwee/templates/lua_template.lua");
     }
     /* 创建常用文件类型扩展 */
     [MenuItem("Assets/Create/XML", false, 81)]
@@ -34,9 +36,10 @@ public class DevExtEditor   {
         //根据第一个文件获取不前文件夹路径
         string folder = AssetDatabase.GetAssetPath(arr[0]);
 
-        //将焦点定位到某个文件，并进行重命名       
+        //将焦点定位到某个文件，并进行重命名     
+        Texture2D icon = Resources.Load<Texture2D>("icon/xml");
         //id,回调处理，新建文件url,图标，源始文件url   
-        ProjectWindowUtil.StartNameEditingIfProjectWindowExists(0, ScriptableObject.CreateInstance<CreateFileAction>(), folder + "/NewXml.xml", null, "Assets/Editor/felixwee/templates/xml_template.xml");
+        ProjectWindowUtil.StartNameEditingIfProjectWindowExists(0, ScriptableObject.CreateInstance<CreateFileAction>(), folder + "/NewXml.xml", icon, "Assets/Editor/felixwee/templates/xml_template.xml");
     }
 
     /* 创建常用文件类型扩展 */
@@ -50,7 +53,8 @@ public class DevExtEditor   {
 
         //将焦点定位到某个文件，并进行重命名       
         //id,回调处理，新建文件url,图标，源始文件url   
-        ProjectWindowUtil.StartNameEditingIfProjectWindowExists(0, ScriptableObject.CreateInstance<CreateFileAction>(), folder + "/NewText.txt", null, "Assets/Editor/felixwee/templates/txt_template.txt");
+        Texture2D icon = Resources.Load<Texture2D>("icon/txt");
+        ProjectWindowUtil.StartNameEditingIfProjectWindowExists(0, ScriptableObject.CreateInstance<CreateFileAction>(), folder + "/NewText.txt", icon, "Assets/Editor/felixwee/templates/txt_template.txt");
     }
 
 }
