@@ -1,0 +1,2 @@
+# Unity_CreateScriptExtension
+扩展Unity可以从指定的模板创建txt,Lua,xml文件，并支持自定义代码模板
